@@ -1,3 +1,5 @@
+@use "@/styles/typography" as t;
+
 .nav {
   width: 100%;
   display: flex;
@@ -8,8 +10,8 @@
   .logo {
     width: 100%;
     height: auto;
-    font-size: 32px;
     text-transform: uppercase;
+    @include t.bebas(32px);
 
     a {
       text-decoration: none;
