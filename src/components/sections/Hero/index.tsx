@@ -6,18 +6,18 @@ export default function Hero() {
   return (
     <section className={style.heroWrapper}>
       <div className={style.heroContent}>
-        <div className={style.texts}>
+        <div className={style.textContainer}>
           <h1>{hero.title}</h1>
           <p>{hero.subtitle}</p>
 
-          <div className={style.buttons}>
-            <button>
-              <a href="">Contacto</a>
+          <div className={style.contactButtons}>
+            <button className={style.contactButton}>
+              <a href="#">Contacto</a>
             </button>
-            <button>
+            <button className={style.iconButton}>
               <a href="#">{linkedin}</a>
             </button>
-            <button>
+            <button className={style.iconButton}>
               <a href="#">{github}</a>
             </button>
           </div>
