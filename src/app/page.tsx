@@ -1,5 +1,12 @@
+import NavBar from "@/components/layouts/Navbar";
+import Hero from "@/components/sections/Hero";
 import "@/styles/globals.scss";
 
 export default function Home() {
-  return <h1>Hola</h1>;
+  return (
+    <div className="pageContainer">
+      <NavBar />
+      <Hero />
+    </div>
+  );
 }

@@ -1,6 +1,10 @@
-export const nav = [
-  { label: "Inicio", href: "#home" },
-  { label: "Sobre mí", href: "#about" },
-  { label: "Proyectos", href: "#projects" },
-  { label: "Contacto", href: "#contact" },
-];
+import { INavBarConfig } from "@/interfaces/INavBar";
+
+export const nav: INavBarConfig = {
+  logo: { text: "Francisco Crema", href: "#home" },
+  items: [
+    { label: "Sobre Mi", href: "#about" },
+    { label: "Trabajos", href: "#work" },
+    { label: "Contacto", href: "#contact" },
+  ],
+};

@@ -1,0 +1,42 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 0;
+
+  .logo {
+    width: 100%;
+    height: auto;
+    font-size: 32px;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: red;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+
+  .listContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .listItemNav {
+      width: auto;
+      height: 24px;
+      margin-right: 5vh;
+      list-style: none;
+      font-size: 16px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
