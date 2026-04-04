@@ -1,4 +1,5 @@
 @use "@/styles/typography" as t;
+@use "@/styles/variables" as *;
 
 .nav {
   width: 100%;
@@ -15,11 +16,11 @@
 
     a {
       text-decoration: none;
-      color: white;
-      transition: 0.2s ease-in-out;
+      color: $color-nav-name;
+      transition: 0.5s ease-in-out;
 
       &:hover {
-        color: blue;
+        color: $hover-button-text;
       }
     }
   }
@@ -37,8 +38,13 @@
       font-size: 16px;
 
       a {
-        color: white;
+        color: $color-description;
         text-decoration: none;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          color: $hover-button-text;
+        }
       }
     }
   }

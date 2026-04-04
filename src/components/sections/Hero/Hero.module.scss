@@ -1,3 +1,5 @@
+@use "@/styles/variables" as *;
+
 .heroWrapper {
   width: auto;
   height: auto;
@@ -21,13 +23,13 @@
         text-transform: uppercase;
         font-size: clamp(2rem, 5vw, 4rem);
         margin-bottom: 8px;
-        color: white;
+        color: $color-text;
       }
 
       p {
         font-size: 16px;
         margin-bottom: 40px;
-        color: white;
+        color: $color-description;
       }
 
       .contactButtons {
@@ -48,7 +50,7 @@
 
           a {
             text-decoration: none;
-            color: black;
+            color: white;
             background: none;
             display: flex;
             justify-content: center;
@@ -76,6 +78,17 @@
             > svg {
               background: #222222;
               fill: #00adf7;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+
+          &:hover {
+            background: $hover-button-background;
+            a {
+              > svg {
+                background: $hover-button-background;
+                fill: $hover-button-icon;
+              }
             }
           }
         }
