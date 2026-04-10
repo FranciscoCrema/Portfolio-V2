@@ -1,0 +1,169 @@
+@use "@/styles/variables" as *;
+@use "@/styles/typography" as t;
+
+.workWrapper {
+  width: auto;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  // Header
+  .workHeader {
+    width: 100%;
+    height: 138px;
+    margin-bottom: 80px;
+
+    .workTitle {
+      width: 60vw;
+      text-transform: uppercase;
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 8px;
+      color: $color-text;
+    }
+
+    .workDescription {
+      width: 50vw;
+      font-size: 16px;
+      color: $color-description;
+    }
+  }
+
+  // Projects
+  .workItemsWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+
+    // Item image
+    .workItem {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+
+      .containerImage {
+        background-color: #1a1a1a;
+        width: 600px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 126px 57px;
+        position: relative;
+        border-radius: 2vh;
+
+        .workCategory {
+          position: absolute;
+          width: auto;
+          height: auto;
+          top: 3vh;
+          left: 3vh;
+          background: #0a0a0a;
+          border-radius: 4vh;
+          padding: 1% 3%;
+          @include t.inter-regular(12px);
+        }
+
+        .imageWrapper {
+          width: 100%;
+          height: auto;
+          background: unset;
+
+          .image {
+            width: 490px;
+            height: 350px;
+            border-radius: 4%;
+          }
+        }
+      }
+
+      // Content of the item
+      .workItemContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .workSubTitle {
+          @include t.inter-medium(24px);
+          margin-bottom: 16px;
+        }
+
+        .workDescription {
+          @include t.inter-regular(16px);
+          color: $color-description;
+        }
+
+        .workItemInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .workInfo {
+            text-transform: uppercase;
+            @include t.inter-medium(16px);
+          }
+
+          .workMetaRow {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include t.inter-regular(14px);
+            position: relative;
+            padding-top: 12px;
+
+            &:not(:first-child)::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 1px;
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            &:last-child::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            &:last-child {
+              padding-bottom: 12px;
+            }
+          }
+        }
+
+        .buttonWrapper {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          gap: 2vw;
+
+          .button {
+            background: unset;
+            border: unset;
+            color: $hover-button-text;
+            font-size: 16px;
+            border-bottom: 1px solid $hover-button-text;
+            padding-bottom: 1%;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              color: $color-text;
+              border-bottom: 1px solid $color-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
