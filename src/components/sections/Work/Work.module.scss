@@ -148,6 +148,8 @@
           gap: 2vw;
 
           .button {
+            width: auto;
+            height: 30px;
             background: unset;
             border: unset;
             color: $hover-button-text;
@@ -162,16 +164,23 @@
 
             .icon {
               background: unset;
-              margin-top: 5px;
+              margin-top: 2px;
 
               > svg {
                 fill: #00adf7;
+                transition: all 0.2s ease-in-out;
               }
             }
 
             &:hover {
               color: $color-text;
               border-bottom: 1px solid $color-text;
+
+              .icon {
+                > svg {
+                  fill: $color-text;
+                }
+              }
             }
           }
         }
