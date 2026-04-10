@@ -1,5 +1,6 @@
 import style from "./Work.module.scss";
 import { workSection } from "@/content/work";
+import { arrow, github } from "@/svg/icons";
 
 export default function Work() {
   return (
@@ -41,8 +42,14 @@ export default function Work() {
               </div>
 
               <div className={style.buttonWrapper}>
-                <button className={style.button}>Ir al repositorio</button>
-                <button className={style.button}>Ver proyecto</button>
+                <button className={style.button}>
+                  Ir al repositorio
+                  <span className={style.icon}>{arrow}</span>
+                </button>
+                <button className={style.button}>
+                  Ver proyecto
+                  <span className={style.icon}>{github}</span>
+                </button>
               </div>
             </div>
           </div>
