@@ -4,7 +4,7 @@ import { arrow, github } from "@/svg/icons";
 
 export default function Work() {
   return (
-    <section className={style.workWrapper}>
+    <section className={style.workWrapper} id="work">
       <div className={style.workHeader}>
         <h1 className={style.workTitle}>{workSection.header.title}</h1>
         <p className={style.workDescription}>

@@ -5,7 +5,7 @@ import { linkedin, github } from "@/svg/icons";
 
 export function Footer() {
   return (
-    <section className={style.footerContainer}>
+    <section className={style.footerContainer} id="contact">
       <div className={style.footerData}>
         <div className={style.footerText}>
           <h1 className={style.footerTitle}>{footer.footerData.title}</h1>
