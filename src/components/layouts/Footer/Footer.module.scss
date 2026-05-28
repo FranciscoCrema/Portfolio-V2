@@ -2,89 +2,105 @@
 @use "@/styles/typography" as t;
 
 .footerContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   width: auto;
-  height: 615px;
-  gap: 24px;
+  height: auto;
 
-  .footerData {
+  .footerContent {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 10vh;
 
-    .footerText {
+    .footerData {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
 
-      .footerTitle {
-        text-transform: uppercase;
-        font-size: clamp(2rem, 5vw, 4rem);
-        margin-bottom: 16px;
-        color: $color-text;
-      }
-
-      .footerDescription {
-        font-size: 16px;
-        margin-bottom: 40px;
-        color: $color-description;
-        @include t.inter-regular(16px);
-      }
-
-      .footerIcons {
+      .footerText {
         display: flex;
-        justify-content: flex-start;
-        gap: 24px;
+        flex-direction: column;
 
-        .iconButton {
-          width: 32px;
-          height: 32px;
-          cursor: pointer;
-          background: transparent;
-          border: none;
-          border-radius: 4vh;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
+        .footerTitle {
+          text-transform: uppercase;
+          font-size: clamp(2rem, 5vw, 4rem);
+          margin-bottom: 16px;
+          color: $color-text;
+        }
 
-          a {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
+        .footerDescription {
+          font-size: 16px;
+          margin-bottom: 40px;
+          color: $color-description;
+          @include t.inter-regular(16px);
 
-            > svg {
-              background: transparent;
-              fill: #00adf7;
-              transition: all 0.2s ease-in-out;
-            }
-          }
-
-          &:hover {
-            a {
-              > svg {
-                fill: $hover-button-icon;
-              }
-            }
+          .footerHighlight {
+            color: $color-text-highlight;
           }
         }
       }
     }
 
-    .footerCopyright {
-      font-size: 16px;
-      color: $color-description;
+    .contactItemContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      .contactItem {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        > svg {
+          fill: $color-text-highlight;
+          width: 30px;
+          height: 30px;
+        }
+
+        .contactText {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .contactLabel {
+            color: $color-description;
+            text-transform: uppercase;
+            @include t.inter-semibold(12px);
+          }
+
+          .contactValue {
+            color: $color-text;
+            @include t.inter-semibold(16px);
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px white;
+        }
+      }
     }
   }
 
-  .footerForm {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .footerCopyright {
+    @include t.inter-regular(16px);
+    color: $color-description;
+    text-align: start;
   }
 }

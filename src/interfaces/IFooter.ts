@@ -1,13 +1,14 @@
+export interface IContact {
+  label: string;
+  value: string;
+}
+
+export interface IFooterData {
+  title: string;
+  copyright: string;
+  contacts: IContact[];
+}
+
 export interface IFooter {
-  footerData: {
-    title: string;
-    description: string;
-    copyright: string;
-  };
-  footerForm: {
-    placeholderName: string;
-    placeholderEmail: string;
-    placeholderSubject: string;
-    placeholderMessage: string;
-  };
+  footerData: IFooterData;
 }
