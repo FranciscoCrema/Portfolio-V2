@@ -7,6 +7,8 @@ export interface IWorkItem {
   category: string;
   year: string;
   role: string;
+  repoUrl: string;
+  projectUrl: string;
 }
 
 export interface IWorkSection {

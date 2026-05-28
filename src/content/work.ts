@@ -17,6 +17,8 @@ export const workSection: IWorkSection = {
       category: "Conceptual Work",
       year: "2023",
       role: "Front-end Developer",
+      repoUrl: "#",
+      projectUrl: "#",
     },
     {
       title: "E-commerce UI Concept",
@@ -28,6 +30,8 @@ export const workSection: IWorkSection = {
       category: "UI Concept",
       year: "2024",
       role: "Front-end Developer",
+      repoUrl: "#",
+      projectUrl: "#",
     },
     {
       title: "Fitness App Dashboard",
@@ -39,6 +43,8 @@ export const workSection: IWorkSection = {
       category: "Web Application",
       year: "2023",
       role: "UI / Front-end Developer",
+      repoUrl: "#",
+      projectUrl: "#",
     },
   ],
 };

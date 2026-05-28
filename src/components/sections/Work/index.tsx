@@ -13,8 +13,8 @@ export default function Work() {
       </div>
 
       <div className={style.workItemsWrapper}>
-        {workSection.items.map((item) => (
-          <div className={style.workItem}>
+        {workSection.items.map((item, index) => (
+          <div key={index} className={style.workItem}>
             <div className={style.containerImage}>
               <h3 className={style.workCategory}>{item.category}</h3>
               <div className={style.imageWrapper}>
@@ -42,14 +42,18 @@ export default function Work() {
               </div>
 
               <div className={style.buttonWrapper}>
-                <button className={style.button}>
+                <a href={item.repoUrl} target="_blank" className={style.button}>
                   Ir al repositorio
-                  <span className={style.icon}>{arrow}</span>
-                </button>
-                <button className={style.button}>
-                  Ver proyecto
                   <span className={style.icon}>{github}</span>
-                </button>
+                </a>
+                <a
+                  href={item.projectUrl}
+                  target="_blank"
+                  className={style.button}
+                >
+                  Ver proyecto
+                  <span className={style.icon}>{arrow}</span>
+                </a>
               </div>
             </div>
           </div>

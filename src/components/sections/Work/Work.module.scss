@@ -150,17 +150,15 @@
           .button {
             width: auto;
             height: 30px;
-            background: unset;
-            border: unset;
             color: $hover-button-text;
             font-size: 16px;
             border-bottom: 1px solid $hover-button-text;
-            padding-bottom: 1%;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
             display: flex;
             align-items: center;
             gap: 5px;
+            text-decoration: none;
 
             .icon {
               background: unset;
