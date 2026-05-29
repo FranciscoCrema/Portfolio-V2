@@ -6,12 +6,14 @@ import Work from "@/components/sections/Work";
 
 export default function Home() {
   return (
-    <div className="pageContainer">
+    <>
       <NavBar />
-      <Hero />
-      <Work />
-      <AboutMe />
-      <Footer />
-    </div>
+      <div className="pageContainer">
+        <Hero />
+        <Work />
+        <AboutMe />
+        <Footer />
+      </div>
+    </>
   );
 }
