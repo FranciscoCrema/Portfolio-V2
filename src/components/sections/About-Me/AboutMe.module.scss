@@ -1,0 +1,67 @@
+@use "src/styles/variables" as *;
+@use "src/styles/typography" as *;
+
+.aboutMeContainer {
+  width: auto;
+  height: auto;
+  color: $color-text;
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+
+  .aboutMeContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .sectionTitle {
+      @include bebas(4rem, 400);
+    }
+
+    .sectionSubtitle {
+      @include inter-medium(18px);
+      color: $color-text;
+      margin-bottom: 16px;
+    }
+  }
+
+  .aboutMeSkills {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .sectionTitle {
+      @include bebas(4rem, 400);
+    }
+
+    .skillsContainer {
+      width: 100%;
+      height: auto;
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .skillTag {
+        background-color: #1a1a1a;
+        color: $color-text;
+        padding: 8px 16px;
+        border-radius: 25px;
+        @include bebas(20px, 400);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $hover-button-text;
+        }
+      }
+    }
+  }
+
+  .sectionDescription {
+    @include inter-regular(14px);
+    color: $color-description;
+  }
+}
