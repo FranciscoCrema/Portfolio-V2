@@ -7,6 +7,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-background;
 
   .logo {
     width: 100%;
