@@ -1,6 +1,7 @@
 // interfaces/IAbout.ts
 export interface ISkill {
   label: string;
+  color?: string;
 }
 
 export interface IAboutSection {

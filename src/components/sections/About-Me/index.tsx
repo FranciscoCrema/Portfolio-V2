@@ -16,7 +16,13 @@ export default function AboutMe() {
         <p className={styles.sectionDescription}>{capabilities.description}</p>
         <div className={styles.skillsContainer}>
           {capabilities.skills.map((skill) => (
-            <span key={skill.label} className={styles.skillTag}>
+            <span
+              key={skill.label}
+              className={styles.skillTag}
+              style={
+                { "--skill-hover-color": skill.color } as React.CSSProperties
+              }
+            >
               {skill.label}
             </span>
           ))}
